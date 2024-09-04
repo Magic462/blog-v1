@@ -6,9 +6,8 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
-
-app.use(createPinia())
+const pinia = createPinia()//创建Pinia
+const app = createApp(App)//创建根实例
+app.use(pinia).mount('#app')//插件安装和视图挂载
 app.use(router)
 
-app.mount('#app')
