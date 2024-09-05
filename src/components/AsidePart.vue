@@ -64,4 +64,13 @@ const handleClose = (key, keyPath) => {
 ::v-deep(.el-row) {
   height: 100%;
 }
+::v-deep .el-menu {
+  height: 100%;
+  margin-left:-17px;
+}
+::v-deep .el-col .mb-2 {
+  height: 30px;
+  margin:0;
+  background-color: pink;
+}
 </style>

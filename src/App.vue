@@ -1,7 +1,9 @@
 <script>
 // import { RouterLink, RouterView } from 'vue-router'
 import { defineComponent } from 'vue'
-import IndexMain from '@/components/IndexMain.vue'
+import AsidePart from '@/components/AsidePart.vue'
+import MainPages from '@/components/MainPages.vue'
+import HeaderPart from '@/components/HeaderPart.vue'
 import { ElContainer,ElAside,ElHeader,ElMain,ElFooter } from 'element-plus'
 
 export default defineComponent({
@@ -11,6 +13,9 @@ export default defineComponent({
     ElHeader,
     ElMain,
     ElFooter,
+    AsidePart,
+    MainPages,
+    HeaderPart
   },
   // setup() {
   //   return {
@@ -20,34 +25,38 @@ export default defineComponent({
   // },
 })
 </script>
-<template>
-  <div class="common-layout">
-    <el-container>
-      <el-header>Header</el-header>
-      <el-container>
-        <el-aside width="500px">
-          <IndexMain></IndexMain>
-        </el-aside>
-        <el-container>
-          <el-main>Main</el-main>
-          <el-footer>Footer</el-footer>
-        </el-container>
-      </el-container>
-    </el-container>
-  </div>
-</template>
 
+<template>  
+  <el-container class="common-layout">  
+    <el-header><HeaderPart></HeaderPart></el-header>  
+    <el-container>  
+      <el-aside>  
+        <!-- 侧边栏内容，这里可以是 AsidePart 组件或其他内容 -->  
+        <AsidePart></AsidePart>  
+      </el-aside>  
+      <el-main>  
+        <!-- 主内容区 -->  
+       <MainPages></MainPages> 
+      </el-main>  
+    </el-container>  
+    <el-footer>Footer</el-footer>  
+  </el-container>  
+</template> 
   
 <style scoped>
 .common-layout{
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 ::v-deep(.el-aside) {
-  width: 400px;
-  height: 1000px;
+  width: 32%;
+  height: 100%;
 }
-/* .IndexMain {
-  width: 100%;
-} */
+::v-deep .el-main {
+  padding:0 8x 8px 8px;
+}
+::v-deep .el-header {
+  height: 220px;
+  padding:0;
+}
 </style>
