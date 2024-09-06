@@ -53,7 +53,8 @@ export default defineComponent({
   height: 100%;
 }
 ::v-deep .el-main {
-  padding:0 8x 8px 8px;
+  /* padding:0 8x 8px 8px; */
+  padding:0;
 }
 ::v-deep .el-header {
   height: 220px;
