@@ -14,7 +14,6 @@
     <!-- <p class="text-center demonstration">Vertical effect</p> -->
     <el-carousel
       height="200px"
-      
       motion-blur
       :autoplay="false"
     >

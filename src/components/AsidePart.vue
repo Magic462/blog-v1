@@ -23,6 +23,7 @@ const handleClose = (key, keyPath) => {
         class="el-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
+
         @open="handleOpen"
         @close="handleClose"
       >
@@ -67,6 +68,7 @@ const handleClose = (key, keyPath) => {
 ::v-deep .el-menu {
   height: 100%;
   margin-left:-17px;
+  /* transition: 0.3s ease-in-out; */
 }
 ::v-deep .el-col .mb-2 {
   height: 30px;
