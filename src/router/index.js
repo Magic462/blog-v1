@@ -1,12 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import PagesPart from '../components/PagesPart.vue'
+import LayoutPage from '@/views/LayoutPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: ()=>import("../components/AsidePart.vue")
+      path:'/',
+      component: LayoutPage
+    },
+    {
+      path: '/PagesPart',
+      name: 'PagesPart',
+      component: PagesPart
     },
     // {
     //   path: '/about',
