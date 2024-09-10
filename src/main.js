@@ -1,5 +1,3 @@
-// import './assets/main.css'
-
 import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -11,7 +9,6 @@ import { createPinia } from 'pinia'
 // import 'element-plus/lib/theme-chalk/base.css'
 import App from './App.vue'
 import router from './router'
-
 import store from "./stores/counter"
 
 const pinia = createPinia()//创建Pinia

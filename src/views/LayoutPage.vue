@@ -42,12 +42,12 @@ export default defineComponent({
         <el-footer><FooterPart></FooterPart></el-footer>
       </el-container>
     </div>
-    <!-- <router-link to="/PagesPart">PagesPart</router-link> -->
     <router-view></router-view>
   </template>
 
 
 <style scoped>
+
 .common-layout{
   width: 100vw;
   height: 100%;
@@ -64,7 +64,7 @@ export default defineComponent({
   padding:0;
 }
 ::v-deep .el-header {
-  height: 220px;
+  height: 400px;
   /*改变组件库自带的内边距样式*/
   padding:0;
 }
