@@ -52,23 +52,26 @@ export default defineComponent({
   width: 100vw;
   height: 100%;
 }
-::v-deep(.el-aside) {
+:deep(.el-contain) {
+    width: 100%;
+}
+:deep(.el-aside){
   /* width: 32%; */
-  height: 100%;
+  height: auto;
   /*设置宽度为auto可以使侧边栏自由缩放*/
   /*取消collapse按钮，监听scroll滚轮按钮，一旦页面发生滚动，侧边导航栏就收缩 */
   width: auto;
 }
-::v-deep .el-main {
+:deep(.el-main) {
   /*改变组件库自带的内边距样式*/
   padding:0;
 }
-::v-deep .el-header {
+:deep(.el-header) {
   height: 400px;
   /*改变组件库自带的内边距样式*/
   padding:0;
 }
-::v-deep .el-footer {
+:deep(.el-footer) {
     background-color: #555;
     /* position: absolute; */
 }
