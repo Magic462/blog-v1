@@ -27,9 +27,9 @@
 .main {
     width: 100%;
     height: 120px;
-    background-color: red;
+    background-color: #e06f79;
     position: relative;
-    margin-bottom:10px;
+    margin-top:10px;
 }
 .title {
     margin: 2px 0;
