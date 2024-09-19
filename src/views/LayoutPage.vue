@@ -47,13 +47,13 @@ addEventListener("scroll", () => {
                   </template>
                   <el-menu-item-group>
                     <template #title><span>算法</span></template>
-                    <el-menu-item index="1-1">LeetCode题解</el-menu-item>
+                    <el-menu-item index="/pages/Algorithm/LeetCode">LeetCode题解</el-menu-item>
                     <el-menu-item index="1-2">做题心得</el-menu-item>
                   </el-menu-item-group>
                   <el-menu-item-group title="Notes">
-                    <el-menu-item index="1-3">about项目</el-menu-item>
+                    <el-menu-item index="/pages/notes/StudyNotes">about项目</el-menu-item>
                   </el-menu-item-group>
-                  <el-sub-menu index="1-4">
+                  <el-sub-menu index="/pages/notes/StudyNotes">
                     <template #title><span>web学习路线</span></template>
                     <el-menu-item index="1-4-1">js</el-menu-item>
                   </el-sub-menu>
@@ -83,20 +83,6 @@ addEventListener("scroll", () => {
         <el-footer><FooterPart></FooterPart></el-footer>
       </el-container>
   </template>
-<!-- <template>
-  <el-container class="common-layout">
-        <el-container>
-            <el-aside><AsidePart></AsidePart></el-aside>
-        <el-container>
-          <el-header><HeaderPart></HeaderPart></el-header>
-          <el-main><MainPages></MainPages></el-main>
-        </el-container>
-        </el-container>
-        <el-footer><FooterPart></FooterPart></el-footer>
-      </el-container>
-    <router-view></router-view>
-  </template> -->
-
 
 <style scoped>
 

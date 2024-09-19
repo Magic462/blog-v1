@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path:'/',
       component: ()=>import('@/views/LayoutPage.vue'),
-      // redirect:'/MainPart',
+      redirect:'/MainPart',
       children:[
         {
           path:'/AboutMyself',
@@ -20,6 +20,10 @@ const router = createRouter({
         {
           path:'/pages/notes/StudyNotes',
           component: ()=>import('@/views/pages/notes/StudyNotes.vue')
+        },
+        {
+          path:'/pages/Algorithm/LeetCode',
+          component: ()=>import('@/views//pages/Algorithm/LeetCode.vue')
         },
         {
           path:'/MainPart',

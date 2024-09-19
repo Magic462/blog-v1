@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <el-carousel height="400px" motion-blur :autoplay="false">
+  <el-carousel height="400px" motion-blur :autoplay="true">
     <el-carousel-item v-for="item in PictureList" :key="item">
       <h3 text="2xl" justify="center">
         <img :src="item.url" alt="" />
