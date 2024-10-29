@@ -1,11 +1,14 @@
 <script setup>
-import { ref } from "vue";
+import { ref,watch } from "vue";
+import { useRoute } from 'vue-router';
 import {
   Document,
   Menu as IconMenu,
   Location,
   Setting,
 } from "@element-plus/icons-vue";
+
+// 实现侧边栏的伸缩效果
 const isCollapse = ref(true);
 // const handleChange = (key, keyPath) => {
 //   console.log(key, keyPath);
@@ -16,9 +19,29 @@ const handleChange = () => {
   // console.log(key, keyPath);
   return !isCollapse.value;
 };
+
+// 滚轮一旦滑动，侧边栏收缩
 addEventListener("scroll", () => {
   isCollapse.value = true;
 });
+
+// 获取当前路由
+const route=useRoute()
+// console.log(111);
+
+// 创建一个响应式变量来存储当前高亮的路径  
+// const highlightedPath = ref(route.path); 
+// 侦听路由变化  
+watch(  
+  () => route.path,  
+  (newPath) => {  
+    console.log(route.path);
+    // 根据新的路由路径更新侧边栏菜单项的高亮状态  
+    // updateMenuHighlight(toPath);  
+    console.log(newPath);
+  },  
+  { immediate: true } // 立即执行一次回调，以处理初始路由  
+);
 </script>
 
 <template>
@@ -28,12 +51,12 @@ addEventListener("scroll", () => {
   </el-radio-group>
   <!-- router选项开启后可以利用index跳转到相关路径default-active跳转时的高亮样式 -->
   <el-menu
-    default-active="2"
     class="el-menu-vertical-demo"
     :collapse="isCollapse"
     background-color="#FC9D99"
     active-text-color="#D24D57"
     :default-active="$route.path"
+    :key="$route.path"
     router
   >
     <el-sub-menu index="1">

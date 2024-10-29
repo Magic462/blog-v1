@@ -30,7 +30,7 @@ const handleScroll=()=>{
   // 获取滚动条位置  
   const scrollTop = document.documentElement.scrollTop
   console.log(scrollTop);
-  isFixed.value=scrollTop<=200;
+  isFixed.value=scrollTop<=400;
 }
 onMounted(()=>{
   window.addEventListener('scroll',handleScroll);
@@ -49,7 +49,6 @@ onUnmounted(() => {
       placeholder="Select"
       style="width: 180px;"
       v-show="isFixed"
-      class="fixed-header"
     >
     <el-option
       v-for="item in options"
@@ -59,12 +58,14 @@ onUnmounted(() => {
     />
 </el-select>
   </div>
-<div class="aq">aq</div>
-<MainPages></MainPages>
-<MainPages></MainPages>
-<MainPages></MainPages>
-<MainPages></MainPages>
-<MainPages></MainPages>
+<!-- <div class="aq">aq</div> -->
+ <div class="pages">
+  <MainPages></MainPages>
+  <MainPages></MainPages>
+  <MainPages></MainPages>
+  <MainPages></MainPages>
+  <MainPages></MainPages>
+ </div>
 </template>
   
 <style scoped>
@@ -74,11 +75,16 @@ onUnmounted(() => {
     position: fixed;
     top:0;
     z-index:10;
+    margin-left:10px;
+    margin-top:4px;
 }
-.aq {
+.pages {
+  margin-top:35px;
+}
+/* .aq {
   width: 200px;
   height: 20px;
   background-color: #fff;
   margin-top:30px;
-}
+} */
 </style>
